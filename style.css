@@ -1,0 +1,106 @@
+body{
+    background-color: aquamarine;
+    margin: 0;
+    display: grid;
+    grid-template-areas: 'nav nav nav nav'
+                        'header section segunda div'
+                        'footer footer footer footer';
+    grid-template-rows: 20vh 70vh 40vh;
+    font-family: 'Abel', sans-serif;
+}
+
+header{
+    grid-area: header;
+    background-color: #29A6A6;
+}
+
+nav{
+    grid-area: nav;
+    background-color: #F2B199;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header, section, .segunda, div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    align-items: center;
+    color: white; 
+    font-family: 'Amatic SC', cursive;
+    text-decoration: none;
+}
+
+nav a{
+    color: #735246;
+    text-decoration: none;
+    font-size: 16pt;
+}
+
+nav a:hover{
+    color: #A0A676;
+    transition: 2s;
+}
+
+img{
+    width: 260px;
+    height: auto;
+    border-radius: 10%;
+    border: 4px double white;
+}
+
+section{
+    grid-area: section;
+    background-color: #A0A676; 
+}
+
+.segunda{
+    grid-area: segunda;
+    background-color: #735246; 
+}
+
+div{
+    grid-area: div;
+    background-color: #D97777; 
+}
+
+footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; 
+    font-size: 16pt;
+}
+
+@media (max-width: 768px){
+    body{
+        grid-template-areas: 'nav nav nav nav'
+                            'header header section section'
+                            'segunda segunda div div'
+                            'footer footer footer footer';
+        grid-template-rows: 20vh 70vh 70vh 40vh;
+    }
+
+    nav a{
+        display: none;
+
+    }
+}
+
+@media (max-width: 425px){
+    body{
+        grid-template-areas: 'nav nav nav nav'
+                            'header header header header'
+                            'section section section section'
+                            'segunda segunda segunda segunda'
+                            'div div div div'
+                            'footer footer footer footer';
+        grid-template-rows: 20vh 70vh 70vh 70vh 70vh 40vh;
+    }
+
+    nav a{
+        display: none;
+    }
+}
